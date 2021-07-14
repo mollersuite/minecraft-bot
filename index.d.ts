@@ -1,6 +1,6 @@
 // @ts-ignore
 import { Bot } from 'mineflayer'
-
+import { CollectBlock } from 'mineflayer-collectblock'
 declare module 'mineflayer' {
   export interface Bot {
     vehicle?: Bot['entity']
@@ -9,5 +9,6 @@ declare module 'mineflayer' {
       stop()
       target?: Bot['entity']
     }
+    collectBlock: CollectBlock
   }
 }

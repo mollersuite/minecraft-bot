@@ -1,3 +1,9 @@
+/**
+ * @fileoverview No Fall Damage
+ *
+ * Fire onground when falling.
+ */
+
 export default (/** @type {import('mineflayer').Bot} */ bot) =>
   bot.on(
     'move',

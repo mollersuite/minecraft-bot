@@ -12,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "mineflayer": "^3.7.0",
+    "mineflayer-pathfinder": "^1.6.3",
+    "mineflayer-pvp": "^1.0.2",
     "vec3": "^0.1.7"
   }
 }

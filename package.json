@@ -1,0 +1,16 @@
+{
+  "name": "mollerbot",
+  "version": "1.0.0",
+  "description": "The minecraft bot that cheats.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "run": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mineflayer": "^3.7.0"
+  }
+}

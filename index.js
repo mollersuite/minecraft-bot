@@ -1,5 +1,4 @@
 import mineflayer from 'mineflayer'
-import vec from 'vec3'
 import { readdir } from 'fs/promises'
 const { createBot } = mineflayer
 

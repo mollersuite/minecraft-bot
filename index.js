@@ -1,4 +1,6 @@
 import mineflayer from 'mineflayer'
+import data from 'minecraft-data'
+
 import vec from 'vec3'
 const { createBot } = mineflayer
 
@@ -12,7 +14,9 @@ const bot = createBot({
 
 function jesus() {
   if (
-    bot.blockAt(bot.entity.position.minus(vec('0', '1', '0'))).name == 'water'
+    ['water', 'lava'].includes(
+      bot.blockAt(bot.entity.position.minus(vec('0', '1', '0')))?.name
+    )
   ) {
     bot.physics.gravity = 0
   } else bot.physics.gravity = 0.08
@@ -21,5 +25,7 @@ function jesus() {
 bot.on('move', jesus)
 bot.on('spawn', async () => {
   await bot.waitForChunksToLoad()
-  bot.chat('Hello, this is a test!')
+})
+bot.on('message', (msg) => {
+  console.log(msg.toAnsi())
 })

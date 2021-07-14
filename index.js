@@ -19,6 +19,21 @@ function jesus() {
 }
 
 bot.on('move', jesus)
+
+function no_fall_damage() {
+  if (bot.entity.velocity.y < -0.5) {
+    bot._client.write('position', {
+      x: bot.entity.position.x,
+      y: bot.entity.position.y,
+      z: bot.entity.position.z,
+      yaw: bot.entity.yaw,
+      pitch: bot.entity.pitch,
+      onGround: true
+    })
+  }
+}
+
+bot.on('move', no_fall_damage)
 bot.on('spawn', async () => {
   await bot.waitForChunksToLoad()
 })

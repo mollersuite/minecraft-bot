@@ -19,14 +19,6 @@ bot.loadPlugins([
   pathfinder
 ])
 
-let health = bot.health
-bot.on('health', () => {
-  if (bot.health < health) {
-    bot.pvp.attack(bot.nearestEntity((entity) => entity.type === 'player'))
-  }
-  health = bot.health
-})
-
 readdir('plugins').then((plugins) =>
   Promise.all(
     plugins
@@ -37,7 +29,6 @@ readdir('plugins').then((plugins) =>
 
 bot.on('spawn', async () => {
   await bot.waitForChunksToLoad()
-  health = bot.health
 })
 
 globalThis.bot = bot

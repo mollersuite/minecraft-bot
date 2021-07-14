@@ -22,7 +22,8 @@ export default (/** @type {import('mineflayer').Bot} */ bot) =>
           'stay mad',
           'https://youtu.be/RVw_c2-Xr9Y', // impact install tutorial
           `${bot.username} winning`,
-          `${bot.username} on top`
+          `${bot.username} on top`,
+          `${bot.username} is gamer`
         ])
       )
     }
